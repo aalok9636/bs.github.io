@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Barcode generator</title>
+ <script src="Jsbarcode.all.min.Js"></script>
+ <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    h1 {
+    text-align: center;
+    text-decoration: underline;
+    font-weight: bold;
+  }
+  h3 {
+    text-align: center;
+  }
+  btn{
+    text-align: center;
+  }
+  
+  
+
+</style>
+
+<body>
+    <h1>Barcode generator</h1>
+    <h3>enter the barcode value: </h3>
+  <div class="content">
+    <input type="text" id="text">
+    <svg id="barcode"></svg>
+    <button id="btn">Generate</button>
+  </div>
+    
+
+  <script>
+    document.getElementById("btn").addEventListener("click", () => {
+  let text = document.getElementById("text").value;
+  JsBarcode("#barcode", text);
+});
+  </script>
+   <a href="javascript:history.go(-1)">Go back</a>
+</body>
+</html>
+
+
+
+
